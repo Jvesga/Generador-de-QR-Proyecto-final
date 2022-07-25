@@ -10,7 +10,7 @@ from PIL import Image,ImageTk
 from tkinter import filedialog
  
 def No():
-    messagebox.showinfo(message=(" Te dije que esta no (•̀o•́)ง"))    
+    messagebox.showinfo(title="😤😕😑", message=(" Te dije que esta no (•̀o•́)ง"))    
 
 def mensaje1():
 
@@ -39,7 +39,8 @@ def mensaje1():
         boton3 = Button(ventana_nueva2, text="    Cerrar QR    ", bg="lime green", command=DestruirQR).place(x=390,y=50)
         
         global my_image
-        root.filename = filedialog.askopenfilename(initialdir="Users\joalv\Downloads\Proyecto Codigos QR" , title="Carpeta de archivos" , filetypes=(("Archivos png", "*.png") , ("Todos los archivos","*.*") ))
+        root.filename = filedialog.askopenfilename(initialdir="Users\joalv\Desktop\Generador-de-QR-Proyecto-final" , title="Carpeta de archivos" , 
+                                                   filetypes=(("Archivos png", "*.png") , ("Todos los archivos","*.*") ))
         my_label = Label(canvaQR, text=root.filename).pack() 
         my_image = ImageTk.PhotoImage(Image.open(root.filename))
         my_image_label = Label(canvaQR, image=my_image).pack()
@@ -48,13 +49,13 @@ def mensaje1():
         
     ventana_nueva1 = Toplevel()
     ventana_nueva1.geometry("500x300")
-    ventana_nueva1.title("CONVERTIR A QR")
+    ventana_nueva1.title("URL A QR")
     ventana_nueva1.iconbitmap("icono.ico")
     ventana_nueva1.resizable(False,False)
     
-    converaqr = Label(ventana_nueva1, text="ingrese lo que quiere convertir: ", fg="black", bd=5, relief="groove").place(x=20,y=102)
+    converaqr = Label(ventana_nueva1, text="ingrese la URL: ", fg="black", bd=5, relief="groove").place(x=20,y=102)
     
-    entrada1 = Entry(ventana_nueva1, bg="gray", width=40, textvariable= imagen_entry, bd=5,highlightthickness=2, highlightcolor="red").place(x=220,y=100)
+    entrada1 = Entry(ventana_nueva1, bg="gray", width=50, textvariable= imagen_entry, bd=5,highlightthickness=2, highlightcolor="red").place(x=150,y=100)
 
     nomber_label= Label(ventana_nueva1, text="Nombre del QR: ", fg="black", bd=5, relief="groove").place(x=20,y=152)
     
@@ -91,20 +92,21 @@ def mensaje2():
         boton3 = Button(ventana_nueva2, text="    Cerrar QR    ", bg="lime green", command=DestruirQR).place(x=390,y=50)
         
         global my_image
-        root.filename = filedialog.askopenfilename(initialdir="Users\joalv\Downloads\Proyecto Codigos QR" , title="Carpeta de archivos" , filetypes=(("Archivos png", "*.png") , ("Todos los archivos","*.*") ))
+        root.filename = filedialog.askopenfilename(initialdir="Users\joalv\Downloads\Proyecto Codigos QR" , title="Carpeta de archivos" ,
+                                                   filetypes=(("Archivos png", "*.png") , ("Todos los archivos","*.*") ))
         my_label = Label(canvaQR, text=root.filename).pack() 
         my_image = ImageTk.PhotoImage(Image.open(root.filename))
         my_image_label = Label(canvaQR, image=my_image).pack()
         
     ventana_nueva3 = Toplevel()
     ventana_nueva3.geometry("500x300")
-    ventana_nueva3.title("CONVERTIR A QR")
+    ventana_nueva3.title("Texto A QR")
     ventana_nueva3.iconbitmap("icono.ico")
     ventana_nueva3.resizable(False,False)
     
-    converaqr = Label(ventana_nueva3, text="ingrese lo que quiere convertir: ", fg="black", bd=5, relief="groove").place(x=20,y=102)
+    converaqr = Label(ventana_nueva3, text="Ingrese el texto: ", fg="black", bd=5, relief="groove").place(x=20,y=102)
     
-    entrada1 = Entry(ventana_nueva3, bg="gray", width=40, textvariable= imagen_entry, bd=5,highlightthickness=2, highlightcolor="red").place(x=220,y=100)
+    entrada1 = Entry(ventana_nueva3, bg="gray", width=50, textvariable= imagen_entry, bd=5,highlightthickness=2, highlightcolor="red").place(x=150,y=100)
 
     nomber_label= Label(ventana_nueva3, text="Nombre del QR: ", fg="black", bd=5, relief="groove").place(x=20,y=152)
     
@@ -119,7 +121,7 @@ def mensaje2():
 
 
 def destruir():
-    messagebox.showinfo(message="NOoOoOoOo te vayas 😥")
+    messagebox.showinfo(title="Chau" , message="NOoOoOoOo te vayas 😥")
     ventana.destroy()
 
 
